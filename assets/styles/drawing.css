@@ -1,0 +1,96 @@
+#container-eyes {
+  position: relative;
+  top: 200px;
+  transform: rotate(5deg);
+}
+
+#container-eyes > div {
+  display: inline-block;
+  animation: blink 5s 5s infinite;
+  transition-duration: 50ms;
+  transition-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+}
+
+@keyframes blink {
+  0% {
+    transform: scale(1, 1);
+  }
+  3% {
+    transform: scale(1, 0.01);
+  }
+  6% {
+    transform: scale(1, 1);
+  }
+  100% {
+    transform: scale(1, 1);
+  }
+}
+/* #container-eyes > div:hover {
+    transform:scale(1, 0.01)
+} */
+.left-eye {
+  height: 200px;
+  width: 100px;
+  background-color: black;
+  border-radius: 48%;
+  border: 10px solid black;
+  transform: scale(1, 1);
+  position: static;
+}
+
+.left-eye-double {
+  height: 100%;
+  width: 100%;
+  background-color: black;
+  border-radius: 48%;
+  border: 10px solid black;
+  position: relative;
+}
+
+.left-eye-glow {
+  height: 50px;
+  width: 30px;
+  background-color: white;
+  border: 5px solid white;
+  border-radius: 48%;
+  position: relative;
+}
+
+.left-positioning {
+  bottom: 195px;
+  left: 50px;
+}
+
+.right-eye {
+  height: 200px;
+  width: 100px;
+  background-color: black;
+  border-radius: 48%;
+  border: 10px solid black;
+  transform: scale(1, 1);
+  position: relative;
+  left: 200px;
+}
+
+.right-eye-double {
+  height: 100%;
+  width: 100%;
+  background-color: black;
+  border-radius: 48%;
+  border: 10px solid black;
+  position: relative;
+}
+
+.right-eye-glow {
+  height: 50px;
+  width: 30px;
+  background-color: white;
+  border: 5px solid white;
+  border-radius: 48%;
+  position: relative;
+}
+
+.right-positioning {
+  bottom: 195px;
+  left: 50px;
+}/*# sourceMappingURL=drawing.css.map */
