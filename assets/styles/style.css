@@ -1,3 +1,62 @@
 * {
   margin: 0;
+}
+
+main {
+  position: relative;
+}
+
+.header-headline {
+  position: absolute;
+  top: 7vw;
+  left: 10vw;
+  font-size: 3vw;
+}
+
+.header-subtext {
+  position: absolute;
+  top: 12vw;
+  left: 10vw;
+  font-size: 3vw;
+}
+
+.middle-text {
+  position: absolute;
+  top: 30vw;
+  left: 1vw;
+  font-size: 3vw;
+}
+
+.middle-subtext {
+  position: absolute;
+  top: 60vw;
+  left: 1vw;
+  font-size: 3vw;
+}
+
+.bottom-text {
+  position: absolute;
+  top: 110vw;
+  left: 40vw;
+  font-size: 3vw;
+}
+
+footer {
+  font-size: 1.2vw;
+}
+
+.footer-white {
+  padding: 20px;
+  background-color: white;
+}
+
+.footer-blue {
+  background-color: blue;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 50px;
+}
+
+.ntnu-logo {
+  width: 20%;
 }/*# sourceMappingURL=style.css.map */
