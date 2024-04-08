@@ -1,6 +1,7 @@
 #container-eyes {
   position: relative;
   top: 200px;
+  left: 500px;
   transform: rotate(5deg);
 }
 
@@ -93,4 +94,12 @@
 .right-positioning {
   bottom: 195px;
   left: 50px;
+}
+
+#star-big {
+  max-width: 300px;
+}
+
+.star-1 {
+  transform: scale(0.25);
 }/*# sourceMappingURL=drawing.css.map */
