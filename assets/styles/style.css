@@ -2,12 +2,25 @@
   font-family: "marydale", sans-serif;
   src: url("https://use.typekit.net/unl7oyo.css");
 }
+@keyframes jump {
+  0% {
+    transform: translateY(25%);
+  }
+  50% {
+    transform: translateY(35%);
+  }
+  100% {
+    transform: translateY(25%);
+  }
+}
 * {
   margin: 0;
 }
 
 main {
   position: relative;
+  width: 100%;
+  height: 100%;
 }
 
 .header-subtext,
@@ -137,6 +150,34 @@ footer {
   font-size: 1.5vw;
 }
 
+.child-left__container,
+.child-right__container,
+.child-middle__container {
+  position: absolute;
+  width: 20%;
+  animation-iteration-count: infinite;
+  animation-duration: 2s;
+}
+
+.child-left__container {
+  left: 15vw;
+  top: 70vw;
+  transform: rotate(-12deg);
+  animation-name: jump;
+}
+
+.child-right__container {
+  left: 58vw;
+  top: 60vw;
+  animation-name: jump;
+}
+
+.child-middle__container {
+  left: 38vw;
+  top: 55vw;
+  animation-name: jump;
+}
+
 .qr {
   position: absolute;
   top: 125vw;
@@ -154,4 +195,11 @@ footer {
 
 .enviroment {
   color: #0fa15c;
+}
+
+.image-moon {
+  position: absolute;
+  width: 22%;
+  left: 63vw;
+  top: 18vw;
 }/*# sourceMappingURL=style.css.map */

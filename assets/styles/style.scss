@@ -3,12 +3,19 @@
     src: url("https://use.typekit.net/unl7oyo.css");
 }
 
+@keyframes jump {
+    0%   {transform:translateY(25%);}
+    50%  {transform:translateY(35%);}
+    100% {transform:translateY(25%);}
+}
 * {
     margin: 0;
 }
 
 main {
     position: relative;
+    width: 100%;
+    height: 100%;
 }
 
 // Common styles for text
@@ -139,6 +146,35 @@ footer {
         font-size: 1.5vw;
     }
 }
+// Children
+.child-left__container,
+.child-right__container,
+.child-middle__container {
+    position: absolute;
+    width: 20%; 
+    animation-iteration-count: infinite;
+    animation-duration: 2s;
+}
+
+.child-left__container{
+    left: 15vw;
+    top: 70vw;
+    transform:rotate(-12deg);
+    animation-name: jump;
+}
+.child-right__container{
+    left: 58vw;
+    top: 60vw;
+    animation-name: jump;
+}
+
+.child-middle__container{
+    left: 38vw;
+    top: 55vw;
+    animation-name: jump;
+}
+
+
 
 // Specific styles
 .qr {
@@ -156,3 +192,22 @@ footer {
 .enviroment {
     color: #0fa15c;
 }
+.image-moon {
+    position: absolute;
+    width: 22%;
+    left: 63vw;
+    top: 18vw;
+}
+
+//<img class="image-moon" src="assets/svgs/moon.svg" alt="">
+//<img class="goblin-big" src="assets/svgs/goblin-big.svg" alt="">
+//<img class="goblin-middle-left" src="assets/svgs/goblin-middle.svg" alt="">
+//<img class="goblin-middle-right" src="assets/svgs/goblin-middle.svg" alt="">
+//<img src="assets/svgs/goblin-small.svg" alt="">
+//<img src="assets/svgs/goblin-small.svg" alt="">
+//<img src="assets/svgs/goblin-small.svg" alt="">
+//<img src="assets/svgs/goblin-small.svg" alt="">
+//<img src="assets/svgs/goblin-small.svg" alt="">
+//<img src="assets/svgs/goblin-small.svg" alt="">
+//<img src="assets/svgs/goblin-small.svg" alt="">
+//<img src="assets/svgs/goblin-small.svg" alt="">
