@@ -2,6 +2,50 @@
   font-family: "marydale", sans-serif;
   src: url("https://use.typekit.net/unl7oyo.css");
 }
+
+@keyframes blink {
+  0% {
+    transform: scale(1, 1);
+  }
+  3% {
+    transform: scale(1, 0.01);
+  }
+  6% {
+    transform: scale(1, 1);
+  }
+  100% {
+    transform: scale(1, 1);
+  }
+}
+@keyframes boom {
+  0% {
+    transform: scale(1, 1);
+  }
+  4% {
+    transform: scale(0.96, 1.04);
+  }
+  8% {
+    transform: scale(1.04, 1.08);
+  }
+  12% {
+    transform: scale(0.96, 1.04);
+  }
+  16% {
+    transform: scale(1, 1);
+  }
+  100% {
+    transform: scale(1, 1);
+  }
+}
+@keyframes wheel-rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
 @keyframes jump {
   0% {
     transform: translateY(25%);
@@ -13,6 +57,7 @@
     transform: translateY(25%);
   }
 }
+
 * {
   margin: 0;
 }
@@ -274,4 +319,135 @@ footer {
 #goblin-big {
   top: 56vw;
   left: 53vw;
-}/*# sourceMappingURL=style.css.map */
+  
+  #container-eyes > div {
+  display: inline-block;
+  animation: blink 5s 5s infinite;
+  transition-duration: 50ms;
+  transition-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+}
+
+#container-people > svg {
+  animation-name: boom;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+}
+
+#container-car {
+  height: 100%;
+  width: 100%;
+}
+
+#wheel-front, #wheel-back {
+  animation-name: wheel-rotate;
+  animation-duration: 1.5s;
+  animation-iteration-count: infinite;
+  transform: scale(0.04);
+}
+
+#container-people {
+  width: 500px;
+}
+
+#container-eyes {
+  position: relative;
+  top: 200px;
+  left: 500px;
+  transform: rotate(5deg);
+}
+
+.left-eye {
+  height: 200px;
+  width: 100px;
+  background-color: black;
+  border-radius: 48%;
+  border: 10px solid black;
+  transform: scale(1, 1);
+  position: static;
+}
+
+.left-eye-double {
+  height: 100%;
+  width: 100%;
+  background-color: black;
+  border-radius: 48%;
+  border: 10px solid black;
+  position: relative;
+}
+
+.left-eye-glow {
+  height: 50px;
+  width: 30px;
+  background-color: white;
+  border: 5px solid white;
+  border-radius: 48%;
+  position: relative;
+}
+
+.left-positioning {
+  bottom: 195px;
+  left: 50px;
+}
+
+.right-eye {
+  height: 200px;
+  width: 100px;
+  background-color: black;
+  border-radius: 48%;
+  border: 10px solid black;
+  transform: scale(1, 1);
+  position: relative;
+  left: 200px;
+}
+
+.right-eye-double {
+  height: 100%;
+  width: 100%;
+  background-color: black;
+  border-radius: 48%;
+  border: 10px solid black;
+  position: relative;
+}
+
+.right-eye-glow {
+  height: 50px;
+  width: 30px;
+  background-color: white;
+  border: 5px solid white;
+  border-radius: 48%;
+  position: relative;
+}
+
+.right-positioning {
+  bottom: 195px;
+  left: 50px;
+}
+
+#star-big {
+  max-width: 300px;
+}
+
+.star-1 {
+  transform: scale(0.25);
+}
+
+#car-nowheels {
+  max-width: 300px;
+}
+
+#wheel-front, #wheel-back {
+  max-width: 50px;
+}
+
+#wheel-front {
+  position: relative;
+  left: -76px;
+  top: -119px;
+}
+
+#wheel-back {
+  position: relative;
+  left: -325px;
+  top: -8px;
+}
+  /*# sourceMappingURL=style.css.map */

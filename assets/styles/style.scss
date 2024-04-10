@@ -1,33 +1,72 @@
 @font-face {
-    font-family: "marydale", sans-serif;
-    src: url("https://use.typekit.net/unl7oyo.css");
+  font-family: "marydale", sans-serif;
+  src: url("https://use.typekit.net/unl7oyo.css");
+}
+
+@keyframes blink {
+  0% {
+    transform: scale(1, 1);
+  }
+  3% {
+    transform: scale(1, 0.01);
+  }
+  6% {
+    transform: scale(1, 1);
+  }
+  100% {
+    transform: scale(1, 1);
+  }
+}
+@keyframes boom {
+  0% {
+    transform: scale(1, 1);
+  }
+  4% {
+    transform: scale(0.96, 1.04);
+  }
+  8% {
+    transform: scale(1.04, 1.08);
+  }
+  12% {
+    transform: scale(0.96, 1.04);
+  }
+  16% {
+    transform: scale(1, 1);
+  }
+  100% {
+    transform: scale(1, 1);
+  }
+}
+@keyframes wheel-rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
 @keyframes jump {
-    0% {
-        transform: translateY(25%);
-    }
-    50% {
-        transform: translateY(35%);
-    }
-    100% {
-        transform: translateY(25%);
-    }
+  0% {
+    transform: translateY(25%);
+  }
+  50% {
+    transform: translateY(35%);
+  }
+  100% {
+    transform: translateY(25%);
+  }
 }
+
 * {
-    margin: 0;
+  margin: 0;
 }
 
 main {
-    position: relative;
-    width: 100%;
-    height: 100%;
+  position: relative;
+  width: 100%;
+  height: 100%;
 }
-
-// Common styles for text
-$text-font-family: "marydale", sans-serif;
-$text-font-weight: 700;
-$text-font-style: normal;
 
 .header-subtext,
 .bottom-left__text,
@@ -41,222 +80,373 @@ $text-font-style: normal;
 .footer-blue__contact,
 .bottom-deep-right__text,
 .bottom-middle__text {
-    font-family: $text-font-family;
-    font-weight: $text-font-weight;
-    font-style: $text-font-style;
+  font-family: "marydale", sans-serif;
+  font-weight: 700;
+  font-style: normal;
 }
 
 .header-headline {
-    position: absolute;
-    top: 4vw;
-    left: 6vw;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 4vw;
-    font-weight: 900;
-    color: #005ba7;
-    line-height: 4.8vw;
+  position: absolute;
+  top: 4vw;
+  left: 6vw;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 4vw;
+  font-weight: 900;
+  color: #005ba7;
+  line-height: 4.8vw;
 }
+
 .header-subtext {
-    position: absolute;
-    top: 16vw;
-    left: 6vw;
-    font-size: 2vw;
-    line-height: 2.3vw;
+  position: absolute;
+  top: 16vw;
+  left: 6vw;
+  font-size: 2vw;
+  line-height: 2.3vw;
 }
 
-// Middle Section
 .middle-text {
-    position: absolute;
-    top: 30vw;
-    left: 6vw;
-    font-size: 2.5vw;
-    color: white;
-    line-height: 3vw;
-}
-.middle-subtext {
-    position: absolute;
-    top: 45vw;
-    left: 6vw;
-    font-size: 2.7vw;
-    transform: rotate(-20deg);
+  position: absolute;
+  top: 30vw;
+  left: 6vw;
+  font-size: 2.5vw;
+  color: white;
+  line-height: 3vw;
 }
 
-// Bottom Section
+.middle-subtext {
+  position: absolute;
+  top: 45vw;
+  left: 6vw;
+  font-size: 2.7vw;
+  transform: rotate(-20deg);
+}
+
 .bottom-text__headline {
-    position: absolute;
-    top: 105vw;
-    left: 33vw;
-    font-size: 5.5vw;
+  position: absolute;
+  top: 105vw;
+  left: 33vw;
+  font-size: 5.5vw;
 }
+
 .bottom-left__text {
-    position: absolute;
-    top: 103vw;
-    left: 15vw;
-    font-size: 1.5vw;
-    line-height: 2.3vw;
+  position: absolute;
+  top: 103vw;
+  left: 15vw;
+  font-size: 1.5vw;
+  line-height: 2.3vw;
 }
+
 .bottom-top__text {
-    position: absolute;
-    top: 92vw;
-    left: 45vw;
-    font-size: 1.5vw;
-    line-height: 2.3vw;
+  position: absolute;
+  top: 92vw;
+  left: 45vw;
+  font-size: 1.5vw;
+  line-height: 2.3vw;
 }
+
 .bottom-right__text,
 .bottom-deep-right__text,
 .bottom-middle__text {
-    position: absolute;
-    font-size: 1.5vw;
-    line-height: 1.9vw;
+  position: absolute;
+  font-size: 1.5vw;
+  line-height: 1.9vw;
 }
 
 .bottom-right__text {
-    top: 100vw;
-    left: 83vw;
+  top: 100vw;
+  left: 83vw;
 }
 
 .bottom-deep-right__text {
-    top: 126vw;
-    left: 78vw;
+  top: 126vw;
+  left: 78vw;
 }
+
 .bottom-middle__text {
-    top: 116vw;
-    left: 46vw;
+  top: 116vw;
+  left: 46vw;
 }
 
-// Footer
 footer {
-    position: absolute;
-    font-size: 1.2vw;
-    top: 135vw;
-    text-align: center;
+  position: absolute;
+  font-size: 1.2vw;
+  top: 135vw;
+  text-align: center;
 }
-.footer-white {
-    background-color: white;
-}
-.footer-blue {
-    display: flex;
-    justify-content: center;
-    background-color: #005ba7;
-    flex-wrap: wrap;
-    padding-top: 5px;
-    padding-bottom: 20px;
-    color: white;
 
-    &__contact,
-    &__download {
-        padding-left: 30px;
-        margin-left: 50px;
-        border-left: solid white;
-    }
-    &__contact {
-        font-size: 1.5vw;
-    }
+.footer-white {
+  background-color: white;
 }
-// Children
+
+.footer-blue {
+  display: flex;
+  justify-content: center;
+  background-color: #005ba7;
+  flex-wrap: wrap;
+  padding-top: 5px;
+  padding-bottom: 20px;
+  color: white;
+}
+.footer-blue__contact, .footer-blue__download {
+  padding-left: 30px;
+  margin-left: 50px;
+  border-left: solid white;
+}
+.footer-blue__contact {
+  font-size: 1.5vw;
+}
+
 .child-left__container,
 .child-right__container,
 .child-middle__container {
-    position: absolute;
-    width: 20%;
-    animation-iteration-count: infinite;
-    animation-duration: 3s;
-    animation-name: jump;
+  position: absolute;
+  width: 20%;
+  animation-iteration-count: infinite;
+  animation-duration: 3s;
+  animation-name: jump;
 }
 
 .child-left__container {
-    left: 15vw;
-    top: 70vw;
-    transform: rotate(-12deg);
+  left: 15vw;
+  top: 70vw;
+  transform: rotate(-12deg);
 }
+
 .child-right__container {
-    left: 58vw;
-    top: 60vw;
+  left: 58vw;
+  top: 60vw;
 }
 
 .child-middle__container {
-    left: 38vw;
-    top: 55vw;
+  left: 38vw;
+  top: 55vw;
 }
-// Specific styles
+
 .qr {
-    position: absolute;
-    top: 125vw;
-    left: 2vw;
-    width: 9%;
+  position: absolute;
+  top: 125vw;
+  left: 2vw;
+  width: 9%;
 }
+
 .ntnu-logo {
-    width: 28%;
+  width: 28%;
 }
+
 .number {
-    font-size: 7vw;
+  font-size: 7vw;
 }
+
 .enviroment {
-    color: #0fa15c;
+  color: #0fa15c;
 }
+
 .image-moon {
-    position: absolute;
-    width: 22%;
-    left: 63vw;
-    top: 18vw;
+  position: absolute;
+  width: 22%;
+  left: 63vw;
+  top: 18vw;
 }
 
 .goblin-small,
 .goblin-middle,
 #goblin-big {
-    position: absolute;
+  position: absolute;
 }
+
 .goblin-small {
-    width: 4%;
+  width: 4%;
 }
+
 .goblin-middle {
-    width: 7%;
+  width: 7%;
 }
+
 #goblin-big {
-    width: 11%;
+  width: 11%;
 }
 
 #goblin-small__far-left {
-    top: 75vw;
-    left: 14vw;
+  top: 75vw;
+  left: 14vw;
 }
+
 #goblin-small__middle-far-left {
-    top: 72vw;
-    left: 28vw;
+  top: 72vw;
+  left: 28vw;
 }
+
 #goblin-small__middle-left {
-    top: 78vw;
-    left: 35vw;
+  top: 78vw;
+  left: 35vw;
 }
+
 #goblin-small__middle-bottom {
-    top: 65vw;
-    left: 34vw;
+  top: 65vw;
+  left: 34vw;
 }
+
 #goblin-small__middle {
-    top: 58vw;
-    left: 45vw;
+  top: 58vw;
+  left: 45vw;
 }
+
 #goblin-small__right-middle {
-    top: 66vw;
-    left: 68vw;
+  top: 66vw;
+  left: 68vw;
 }
-#goblin-small__far-right{
-    top: 62vw;
-    left: 75vw;
+
+#goblin-small__far-right {
+  top: 62vw;
+  left: 75vw;
 }
-#goblin-small__right-bottom{
-    top: 76vw;
-    left: 78vw;
+
+#goblin-small__right-bottom {
+  top: 76vw;
+  left: 78vw;
 }
-#goblin-middle-right{
-    top: 64vw;
-    left: 25vw;
+
+#goblin-middle-right {
+  top: 64vw;
+  left: 25vw;
 }
-#goblin-middle-left{
-    top: 56vw;
-    left: 65vw;
+
+#goblin-middle-left {
+  top: 56vw;
+  left: 65vw;
 }
-#goblin-big{
-    top: 56vw;
-    left: 53vw;
+
+#goblin-big {
+  top: 56vw;
+  left: 53vw;
+  
+  #container-eyes > div {
+  display: inline-block;
+  animation: blink 5s 5s infinite;
+  transition-duration: 50ms;
+  transition-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+}
+
+#container-people > svg {
+  animation-name: boom;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+}
+
+#container-car {
+  height: 100%;
+  width: 100%;
+}
+
+#wheel-front, #wheel-back {
+  animation-name: wheel-rotate;
+  animation-duration: 1.5s;
+  animation-iteration-count: infinite;
+  transform: scale(0.04);
+}
+
+#container-people {
+  width: 500px;
+}
+
+#container-eyes {
+  position: relative;
+  top: 200px;
+  left: 500px;
+  transform: rotate(5deg);
+}
+
+.left-eye {
+  height: 200px;
+  width: 100px;
+  background-color: black;
+  border-radius: 48%;
+  border: 10px solid black;
+  transform: scale(1, 1);
+  position: static;
+}
+
+.left-eye-double {
+  height: 100%;
+  width: 100%;
+  background-color: black;
+  border-radius: 48%;
+  border: 10px solid black;
+  position: relative;
+}
+
+.left-eye-glow {
+  height: 50px;
+  width: 30px;
+  background-color: white;
+  border: 5px solid white;
+  border-radius: 48%;
+  position: relative;
+}
+
+.left-positioning {
+  bottom: 195px;
+  left: 50px;
+}
+
+.right-eye {
+  height: 200px;
+  width: 100px;
+  background-color: black;
+  border-radius: 48%;
+  border: 10px solid black;
+  transform: scale(1, 1);
+  position: relative;
+  left: 200px;
+}
+
+.right-eye-double {
+  height: 100%;
+  width: 100%;
+  background-color: black;
+  border-radius: 48%;
+  border: 10px solid black;
+  position: relative;
+}
+
+.right-eye-glow {
+  height: 50px;
+  width: 30px;
+  background-color: white;
+  border: 5px solid white;
+  border-radius: 48%;
+  position: relative;
+}
+
+.right-positioning {
+  bottom: 195px;
+  left: 50px;
+}
+
+#star-big {
+  max-width: 300px;
+}
+
+.star-1 {
+  transform: scale(0.25);
+}
+
+#car-nowheels {
+  max-width: 300px;
+}
+
+#wheel-front, #wheel-back {
+  max-width: 50px;
+}
+
+#wheel-front {
+  position: relative;
+  left: -76px;
+  top: -119px;
+}
+
+#wheel-back {
+  position: relative;
+  left: -325px;
+  top: -8px;
 }
