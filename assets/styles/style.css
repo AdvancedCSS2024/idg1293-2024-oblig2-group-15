@@ -1,1 +1,277 @@
-/*# sourceMappingURL=style.css.map */
+@font-face {
+  font-family: "marydale", sans-serif;
+  src: url("https://use.typekit.net/unl7oyo.css");
+}
+@keyframes jump {
+  0% {
+    transform: translateY(25%);
+  }
+  50% {
+    transform: translateY(35%);
+  }
+  100% {
+    transform: translateY(25%);
+  }
+}
+* {
+  margin: 0;
+}
+
+main {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.header-subtext,
+.bottom-left__text,
+.bottom-top__text,
+.bottom-right__text,
+.footer-white__text,
+.footer-blue__download,
+.middle-text,
+.middle-subtext,
+.bottom-text__headline,
+.footer-blue__contact,
+.bottom-deep-right__text,
+.bottom-middle__text {
+  font-family: "marydale", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.header-headline {
+  position: absolute;
+  top: 4vw;
+  left: 6vw;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 4vw;
+  font-weight: 900;
+  color: #005ba7;
+  line-height: 4.8vw;
+}
+
+.header-subtext {
+  position: absolute;
+  top: 16vw;
+  left: 6vw;
+  font-size: 2vw;
+  line-height: 2.3vw;
+}
+
+.middle-text {
+  position: absolute;
+  top: 30vw;
+  left: 6vw;
+  font-size: 2.5vw;
+  color: white;
+  line-height: 3vw;
+}
+
+.middle-subtext {
+  position: absolute;
+  top: 45vw;
+  left: 6vw;
+  font-size: 2.7vw;
+  transform: rotate(-20deg);
+}
+
+.bottom-text__headline {
+  position: absolute;
+  top: 105vw;
+  left: 33vw;
+  font-size: 5.5vw;
+}
+
+.bottom-left__text {
+  position: absolute;
+  top: 103vw;
+  left: 15vw;
+  font-size: 1.5vw;
+  line-height: 2.3vw;
+}
+
+.bottom-top__text {
+  position: absolute;
+  top: 92vw;
+  left: 45vw;
+  font-size: 1.5vw;
+  line-height: 2.3vw;
+}
+
+.bottom-right__text,
+.bottom-deep-right__text,
+.bottom-middle__text {
+  position: absolute;
+  font-size: 1.5vw;
+  line-height: 1.9vw;
+}
+
+.bottom-right__text {
+  top: 100vw;
+  left: 83vw;
+}
+
+.bottom-deep-right__text {
+  top: 126vw;
+  left: 78vw;
+}
+
+.bottom-middle__text {
+  top: 116vw;
+  left: 46vw;
+}
+
+footer {
+  position: absolute;
+  font-size: 1.2vw;
+  top: 135vw;
+  text-align: center;
+}
+
+.footer-white {
+  background-color: white;
+}
+
+.footer-blue {
+  display: flex;
+  justify-content: center;
+  background-color: #005ba7;
+  flex-wrap: wrap;
+  padding-top: 5px;
+  padding-bottom: 20px;
+  color: white;
+}
+.footer-blue__contact, .footer-blue__download {
+  padding-left: 30px;
+  margin-left: 50px;
+  border-left: solid white;
+}
+.footer-blue__contact {
+  font-size: 1.5vw;
+}
+
+.child-left__container,
+.child-right__container,
+.child-middle__container {
+  position: absolute;
+  width: 20%;
+  animation-iteration-count: infinite;
+  animation-duration: 3s;
+  animation-name: jump;
+}
+
+.child-left__container {
+  left: 15vw;
+  top: 70vw;
+  transform: rotate(-12deg);
+}
+
+.child-right__container {
+  left: 58vw;
+  top: 60vw;
+}
+
+.child-middle__container {
+  left: 38vw;
+  top: 55vw;
+}
+
+.qr {
+  position: absolute;
+  top: 125vw;
+  left: 2vw;
+  width: 9%;
+}
+
+.ntnu-logo {
+  width: 28%;
+}
+
+.number {
+  font-size: 7vw;
+}
+
+.enviroment {
+  color: #0fa15c;
+}
+
+.image-moon {
+  position: absolute;
+  width: 22%;
+  left: 63vw;
+  top: 18vw;
+}
+
+.goblin-small,
+.goblin-middle,
+#goblin-big {
+  position: absolute;
+}
+
+.goblin-small {
+  width: 4%;
+}
+
+.goblin-middle {
+  width: 7%;
+}
+
+#goblin-big {
+  width: 11%;
+}
+
+#goblin-small__far-left {
+  top: 75vw;
+  left: 14vw;
+}
+
+#goblin-small__middle-far-left {
+  top: 72vw;
+  left: 28vw;
+}
+
+#goblin-small__middle-left {
+  top: 78vw;
+  left: 35vw;
+}
+
+#goblin-small__middle-bottom {
+  top: 65vw;
+  left: 34vw;
+}
+
+#goblin-small__middle {
+  top: 58vw;
+  left: 45vw;
+}
+
+#goblin-small__right-middle {
+  top: 66vw;
+  left: 68vw;
+}
+
+#goblin-small__far-right {
+  top: 62vw;
+  left: 75vw;
+}
+
+#goblin-small__right-bottom {
+  top: 76vw;
+  left: 78vw;
+}
+
+#goblin-middle-right {
+  top: 64vw;
+  left: 25vw;
+}
+
+#goblin-middle-left {
+  top: 56vw;
+  left: 65vw;
+}
+
+#goblin-big {
+  top: 56vw;
+  left: 53vw;
+}/*# sourceMappingURL=style.css.map */
