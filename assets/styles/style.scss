@@ -4,9 +4,15 @@
 }
 
 @keyframes jump {
-    0%   {transform:translateY(25%);}
-    50%  {transform:translateY(35%);}
-    100% {transform:translateY(25%);}
+    0% {
+        transform: translateY(25%);
+    }
+    50% {
+        transform: translateY(35%);
+    }
+    100% {
+        transform: translateY(25%);
+    }
 }
 * {
     margin: 0;
@@ -69,9 +75,10 @@ $text-font-style: normal;
 }
 .middle-subtext {
     position: absolute;
-    top: 55vw;
+    top: 45vw;
     left: 6vw;
-    font-size: 3vw;
+    font-size: 2.7vw;
+    transform: rotate(-20deg);
 }
 
 // Bottom Section
@@ -100,7 +107,7 @@ $text-font-style: normal;
 .bottom-middle__text {
     position: absolute;
     font-size: 1.5vw;
-    line-height: 2.3vw;
+    line-height: 1.9vw;
 }
 
 .bottom-right__text {
@@ -151,31 +158,26 @@ footer {
 .child-right__container,
 .child-middle__container {
     position: absolute;
-    width: 20%; 
+    width: 20%;
     animation-iteration-count: infinite;
-    animation-duration: 2s;
+    animation-duration: 3s;
+    animation-name: jump;
 }
 
-.child-left__container{
+.child-left__container {
     left: 15vw;
     top: 70vw;
-    transform:rotate(-12deg);
-    animation-name: jump;
+    transform: rotate(-12deg);
 }
-.child-right__container{
+.child-right__container {
     left: 58vw;
     top: 60vw;
-    animation-name: jump;
 }
 
-.child-middle__container{
+.child-middle__container {
     left: 38vw;
     top: 55vw;
-    animation-name: jump;
 }
-
-
-
 // Specific styles
 .qr {
     position: absolute;
@@ -199,15 +201,62 @@ footer {
     top: 18vw;
 }
 
-//<img class="image-moon" src="assets/svgs/moon.svg" alt="">
-//<img class="goblin-big" src="assets/svgs/goblin-big.svg" alt="">
-//<img class="goblin-middle-left" src="assets/svgs/goblin-middle.svg" alt="">
-//<img class="goblin-middle-right" src="assets/svgs/goblin-middle.svg" alt="">
-//<img src="assets/svgs/goblin-small.svg" alt="">
-//<img src="assets/svgs/goblin-small.svg" alt="">
-//<img src="assets/svgs/goblin-small.svg" alt="">
-//<img src="assets/svgs/goblin-small.svg" alt="">
-//<img src="assets/svgs/goblin-small.svg" alt="">
-//<img src="assets/svgs/goblin-small.svg" alt="">
-//<img src="assets/svgs/goblin-small.svg" alt="">
-//<img src="assets/svgs/goblin-small.svg" alt="">
+.goblin-small,
+.goblin-middle,
+#goblin-big {
+    position: absolute;
+}
+.goblin-small {
+    width: 4%;
+}
+.goblin-middle {
+    width: 7%;
+}
+#goblin-big {
+    width: 11%;
+}
+
+#goblin-small__far-left {
+    top: 75vw;
+    left: 14vw;
+}
+#goblin-small__middle-far-left {
+    top: 72vw;
+    left: 28vw;
+}
+#goblin-small__middle-left {
+    top: 78vw;
+    left: 35vw;
+}
+#goblin-small__middle-bottom {
+    top: 65vw;
+    left: 34vw;
+}
+#goblin-small__middle {
+    top: 58vw;
+    left: 45vw;
+}
+#goblin-small__right-middle {
+    top: 66vw;
+    left: 68vw;
+}
+#goblin-small__far-right{
+    top: 62vw;
+    left: 75vw;
+}
+#goblin-small__right-bottom{
+    top: 76vw;
+    left: 78vw;
+}
+#goblin-middle-right{
+    top: 64vw;
+    left: 25vw;
+}
+#goblin-middle-left{
+    top: 56vw;
+    left: 65vw;
+}
+#goblin-big{
+    top: 56vw;
+    left: 53vw;
+}

@@ -70,9 +70,10 @@ main {
 
 .middle-subtext {
   position: absolute;
-  top: 55vw;
+  top: 45vw;
   left: 6vw;
-  font-size: 3vw;
+  font-size: 2.7vw;
+  transform: rotate(-20deg);
 }
 
 .bottom-text__headline {
@@ -103,7 +104,7 @@ main {
 .bottom-middle__text {
   position: absolute;
   font-size: 1.5vw;
-  line-height: 2.3vw;
+  line-height: 1.9vw;
 }
 
 .bottom-right__text {
@@ -156,26 +157,24 @@ footer {
   position: absolute;
   width: 20%;
   animation-iteration-count: infinite;
-  animation-duration: 2s;
+  animation-duration: 3s;
+  animation-name: jump;
 }
 
 .child-left__container {
   left: 15vw;
   top: 70vw;
   transform: rotate(-12deg);
-  animation-name: jump;
 }
 
 .child-right__container {
   left: 58vw;
   top: 60vw;
-  animation-name: jump;
 }
 
 .child-middle__container {
   left: 38vw;
   top: 55vw;
-  animation-name: jump;
 }
 
 .qr {
@@ -202,4 +201,77 @@ footer {
   width: 22%;
   left: 63vw;
   top: 18vw;
+}
+
+.goblin-small,
+.goblin-middle,
+#goblin-big {
+  position: absolute;
+}
+
+.goblin-small {
+  width: 4%;
+}
+
+.goblin-middle {
+  width: 7%;
+}
+
+#goblin-big {
+  width: 11%;
+}
+
+#goblin-small__far-left {
+  top: 75vw;
+  left: 14vw;
+}
+
+#goblin-small__middle-far-left {
+  top: 72vw;
+  left: 28vw;
+}
+
+#goblin-small__middle-left {
+  top: 78vw;
+  left: 35vw;
+}
+
+#goblin-small__middle-bottom {
+  top: 65vw;
+  left: 34vw;
+}
+
+#goblin-small__middle {
+  top: 58vw;
+  left: 45vw;
+}
+
+#goblin-small__right-middle {
+  top: 66vw;
+  left: 68vw;
+}
+
+#goblin-small__far-right {
+  top: 62vw;
+  left: 75vw;
+}
+
+#goblin-small__right-bottom {
+  top: 76vw;
+  left: 78vw;
+}
+
+#goblin-middle-right {
+  top: 64vw;
+  left: 25vw;
+}
+
+#goblin-middle-left {
+  top: 56vw;
+  left: 65vw;
+}
+
+#goblin-big {
+  top: 56vw;
+  left: 53vw;
 }/*# sourceMappingURL=style.css.map */
